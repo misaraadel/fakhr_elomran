@@ -55,6 +55,20 @@
     }
   }
 
+  html[dir="ltr"] {
+    .navbar {
+      .navbar-nav {
+        right: unset;
+        left: -100%;
+
+        &.active-nav {
+          right: unset;
+          left: 0px !important;
+        }  
+      }
+    }
+  }
+
   header {
     .contain {
       padding: 150px 0px 100px !important;

@@ -989,8 +989,17 @@ ul {
   --light-filter: invert(100%) sepia(6%) saturate(2%) hue-rotate(104deg) brightness(106%) contrast(100%);
 }
 
+html[dir=ltr] .about-us .contain ul li::after {
+  right: unset;
+  left: 0px;
+}
+html[dir=ltr] .services .swiper-button-prev {
+  right: calc(50% - 60px) !important;
+  left: unset !important;
+}
+
 .custom-btn {
-  width: 170px;
+  width: 180px;
   height: 50px;
   position: relative;
   z-index: 9;
@@ -999,6 +1008,7 @@ ul {
   align-content: center;
   justify-content: center;
   border-radius: 40px;
+  overflow: hidden;
 }
 .custom-btn span {
   font-size: 18px;
@@ -1150,6 +1160,26 @@ ul {
 }
 .navbar .contain .navbar-nav .nav-item .nav-link:hover::after, .navbar .contain .navbar-nav .nav-item .nav-link:hover::before {
   width: 50%;
+}
+.navbar .contain .lang {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+.navbar .contain .lang span {
+  color: var(--light-color);
+  font-size: 15px;
+  font-weight: 500;
+}
+.navbar .contain .lang:hover span {
+  -webkit-animation: fadeInRight 0.4s linear both;
+          animation: fadeInRight 0.4s linear both;
 }
 
 header {
@@ -1901,6 +1931,14 @@ footer .copyrights p {
   .navbar.scrolled .navbar-nav {
     top: 80px;
     height: calc(100vh - 80px);
+  }
+  html[dir=ltr] .navbar .navbar-nav {
+    right: unset;
+    left: -100%;
+  }
+  html[dir=ltr] .navbar .navbar-nav.active-nav {
+    right: unset;
+    left: 0px !important;
   }
   header .contain {
     padding: 150px 0px 100px !important;

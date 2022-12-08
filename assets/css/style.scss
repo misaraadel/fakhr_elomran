@@ -12,8 +12,20 @@
   --light-filter: invert(100%) sepia(6%) saturate(2%) hue-rotate(104deg) brightness(106%) contrast(100%);
 }
 
+html[dir="ltr"] {
+  .about-us .contain ul li::after {
+    right: unset;
+    left: 0px;
+  }
+
+  .services .swiper-button-prev {
+    right: calc(50% - 60px) !important;
+    left: unset !important;
+  }
+}
+
 .custom-btn {
-  width: 170px;
+  width: 180px;
   height: 50px;
   position: relative;
   z-index: 9;
@@ -22,6 +34,7 @@
   align-content: center;
   justify-content: center;
   border-radius: 40px;
+  overflow: hidden;
 
   span {
     font-size: 18px;
@@ -199,6 +212,30 @@
               width: 50%;
             }
           }
+        }
+      }
+    }
+
+    .lang {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+      border-radius: 10px;
+      background-color: var(--primary-color);
+      overflow: hidden;
+
+      span {
+        color: var(--light-color);
+        font-size: 15px;
+        font-weight: 500;
+      }
+      
+      &:hover {
+        span {
+          animation: fadeInRight .4s linear both;
         }
       }
     }
