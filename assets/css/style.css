@@ -1925,8 +1925,8 @@ footer .copyrights p {
     width: 100%;
   }
   .navbar .brand-name img {
-    -o-object-position: left !important;
-       object-position: left !important;
+    -o-object-position: center !important;
+       object-position: center !important;
   }
   .navbar.scrolled .navbar-nav {
     top: 80px;
